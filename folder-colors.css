@@ -1,75 +1,145 @@
 /* ── Folder Background Colors — Felix's Vault ──
-   Colors are assigned by folder position (top to bottom).
-   Add a new folder and it automatically gets the next color.
-   Pre-defined for up to 12 folders. ── */
+   Root-level folders are detected by having no "/" in their path.
+   Colors assigned by position 1–12. New folders auto-get the next color. ── */
 
-/* ── Shared: rounded cards + spacing ── */
-.mod-root > .nav-folder-children > .nav-folder {
+/* ── Shared card style for ALL root-level folders ── */
+.nav-folder-children > .nav-folder:has(> .nav-folder-title:not([data-path*="/"])) {
   border-radius: 8px;
   margin: 3px 4px;
   overflow: hidden;
 }
-
-.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title {
+.nav-folder-children > .nav-folder:has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
   font-weight: 700;
 }
 
 /* ── Slot 1 — Gold ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(1) { background-color: rgba(249, 199, 79, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(1) > .nav-folder-title { background-color: rgba(249, 199, 79, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(1) > .nav-folder-title .nav-folder-title-content { color: #7a5c00; }
+.nav-folder-children > .nav-folder:nth-child(1):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(249, 199, 79, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(1):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(249, 199, 79, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(1):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #7a5c00;
+}
 
 /* ── Slot 2 — Cyan ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(2) { background-color: rgba(76, 201, 240, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(2) > .nav-folder-title { background-color: rgba(76, 201, 240, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(2) > .nav-folder-title .nav-folder-title-content { color: #004a5e; }
+.nav-folder-children > .nav-folder:nth-child(2):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(76, 201, 240, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(2):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(76, 201, 240, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(2):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #004a5e;
+}
 
 /* ── Slot 3 — Orange ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(3) { background-color: rgba(244, 132, 95, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(3) > .nav-folder-title { background-color: rgba(244, 132, 95, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(3) > .nav-folder-title .nav-folder-title-content { color: #6b2600; }
+.nav-folder-children > .nav-folder:nth-child(3):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(244, 132, 95, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(3):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(244, 132, 95, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(3):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #6b2600;
+}
 
 /* ── Slot 4 — Green ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(4) { background-color: rgba(144, 190, 109, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(4) > .nav-folder-title { background-color: rgba(144, 190, 109, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(4) > .nav-folder-title .nav-folder-title-content { color: #1e4d00; }
+.nav-folder-children > .nav-folder:nth-child(4):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(144, 190, 109, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(4):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(144, 190, 109, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(4):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #1e4d00;
+}
 
 /* ── Slot 5 — Purple ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(5) { background-color: rgba(199, 125, 255, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(5) > .nav-folder-title { background-color: rgba(199, 125, 255, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(5) > .nav-folder-title .nav-folder-title-content { color: #3b006b; }
+.nav-folder-children > .nav-folder:nth-child(5):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(199, 125, 255, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(5):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(199, 125, 255, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(5):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #3b006b;
+}
 
 /* ── Slot 6 — Red ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(6) { background-color: rgba(255, 107, 107, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(6) > .nav-folder-title { background-color: rgba(255, 107, 107, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(6) > .nav-folder-title .nav-folder-title-content { color: #6b0000; }
+.nav-folder-children > .nav-folder:nth-child(6):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(255, 107, 107, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(6):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(255, 107, 107, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(6):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #6b0000;
+}
 
 /* ── Slot 7 — Teal ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(7) { background-color: rgba(67, 217, 173, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(7) > .nav-folder-title { background-color: rgba(67, 217, 173, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(7) > .nav-folder-title .nav-folder-title-content { color: #003d2e; }
+.nav-folder-children > .nav-folder:nth-child(7):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(67, 217, 173, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(7):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(67, 217, 173, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(7):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #003d2e;
+}
 
 /* ── Slot 8 — Lime ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(8) { background-color: rgba(168, 216, 168, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(8) > .nav-folder-title { background-color: rgba(168, 216, 168, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(8) > .nav-folder-title .nav-folder-title-content { color: #1a3d1a; }
+.nav-folder-children > .nav-folder:nth-child(8):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(168, 216, 168, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(8):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(168, 216, 168, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(8):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #1a3d1a;
+}
 
 /* ── Slot 9 — Pink ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9) { background-color: rgba(247, 37, 133, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9) > .nav-folder-title { background-color: rgba(247, 37, 133, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9) > .nav-folder-title .nav-folder-title-content { color: #5a0028; }
+.nav-folder-children > .nav-folder:nth-child(9):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(247, 37, 133, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(9):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(247, 37, 133, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(9):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #5a0028;
+}
 
 /* ── Slot 10 — Blue ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(10) { background-color: rgba(67, 97, 238, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(10) > .nav-folder-title { background-color: rgba(67, 97, 238, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(10) > .nav-folder-title .nav-folder-title-content { color: #f0f4ff; }
+.nav-folder-children > .nav-folder:nth-child(10):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(67, 97, 238, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(10):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(67, 97, 238, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(10):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #f0f4ff;
+}
 
 /* ── Slot 11 — Amber ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(11) { background-color: rgba(251, 133, 0, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(11) > .nav-folder-title { background-color: rgba(251, 133, 0, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(11) > .nav-folder-title .nav-folder-title-content { color: #4d2800; }
+.nav-folder-children > .nav-folder:nth-child(11):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(251, 133, 0, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(11):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(251, 133, 0, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(11):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #4d2800;
+}
 
 /* ── Slot 12 — Sage ── */
-.mod-root > .nav-folder-children > .nav-folder:nth-child(12) { background-color: rgba(116, 198, 157, 0.18); }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(12) > .nav-folder-title { background-color: rgba(116, 198, 157, 0.55) !important; }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(12) > .nav-folder-title .nav-folder-title-content { color: #003320; }
+.nav-folder-children > .nav-folder:nth-child(12):has(> .nav-folder-title:not([data-path*="/"])) {
+  background-color: rgba(116, 198, 157, 0.18);
+}
+.nav-folder-children > .nav-folder:nth-child(12):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+  background-color: rgba(116, 198, 157, 0.55) !important;
+}
+.nav-folder-children > .nav-folder:nth-child(12):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
+  color: #003320;
+}

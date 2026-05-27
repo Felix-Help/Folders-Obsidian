@@ -1,41 +1,111 @@
-/* Folder Colors — Felix's Vault */
+/* ── Folder Background Colors — Felix's Vault ── */
 
-.nav-folder-title[data-path="💡 BRAINSTORM IDEAS"] .nav-folder-title-content {
-  color: #f9c74f;
+/* ── Shared base: add spacing between top-level folders ── */
+.nav-folder:has(> .nav-folder-title[data-path^="💡"]),
+.nav-folder:has(> .nav-folder-title[data-path^="💻"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📰"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🏠"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📁"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🗂"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📖"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📈"]) {
+  border-radius: 8px;
+  margin: 3px 4px;
+  overflow: hidden;
+}
+
+/* ── 💡 BRAINSTORM IDEAS — Gold ── */
+.nav-folder:has(> .nav-folder-title[data-path^="💡"]) {
+  background-color: rgba(249, 199, 79, 0.18);
+}
+.nav-folder-title[data-path^="💡"] {
+  background-color: rgba(249, 199, 79, 0.55) !important;
+}
+.nav-folder-title[data-path^="💡"] .nav-folder-title-content {
+  color: #7a5c00;
   font-weight: 700;
 }
 
-.nav-folder-title[data-path="💻 Coding Project for Automation"] .nav-folder-title-content {
-  color: #4cc9f0;
+/* ── 💻 Coding Project — Cyan ── */
+.nav-folder:has(> .nav-folder-title[data-path^="💻"]) {
+  background-color: rgba(76, 201, 240, 0.18);
+}
+.nav-folder-title[data-path^="💻"] {
+  background-color: rgba(76, 201, 240, 0.55) !important;
+}
+.nav-folder-title[data-path^="💻"] .nav-folder-title-content {
+  color: #004a5e;
   font-weight: 700;
 }
 
-.nav-folder-title[data-path="📰 Daily News"] .nav-folder-title-content {
-  color: #f4845f;
+/* ── 📰 Daily News — Orange ── */
+.nav-folder:has(> .nav-folder-title[data-path^="📰"]) {
+  background-color: rgba(244, 132, 95, 0.18);
+}
+.nav-folder-title[data-path^="📰"] {
+  background-color: rgba(244, 132, 95, 0.55) !important;
+}
+.nav-folder-title[data-path^="📰"] .nav-folder-title-content {
+  color: #6b2600;
   font-weight: 700;
 }
 
-.nav-folder-title[data-path="🏠 Everyday Life"] .nav-folder-title-content {
-  color: #90be6d;
+/* ── 🏠 Everyday Life — Green ── */
+.nav-folder:has(> .nav-folder-title[data-path^="🏠"]) {
+  background-color: rgba(144, 190, 109, 0.18);
+}
+.nav-folder-title[data-path^="🏠"] {
+  background-color: rgba(144, 190, 109, 0.55) !important;
+}
+.nav-folder-title[data-path^="🏠"] .nav-folder-title-content {
+  color: #1e4d00;
   font-weight: 700;
 }
 
-.nav-folder-title[data-path="📁 Folders-Obsidian"] .nav-folder-title-content {
-  color: #c77dff;
+/* ── 📁 Folders-Obsidian — Purple ── */
+.nav-folder:has(> .nav-folder-title[data-path^="📁"]) {
+  background-color: rgba(199, 125, 255, 0.18);
+}
+.nav-folder-title[data-path^="📁"] {
+  background-color: rgba(199, 125, 255, 0.55) !important;
+}
+.nav-folder-title[data-path^="📁"] .nav-folder-title-content {
+  color: #3b006b;
   font-weight: 700;
 }
 
-.nav-folder-title[data-path="🗂️ Projects"] .nav-folder-title-content {
-  color: #ff6b6b;
+/* ── 🗂️ Projects — Red/Pink ── */
+.nav-folder:has(> .nav-folder-title[data-path^="🗂"]) {
+  background-color: rgba(255, 107, 107, 0.18);
+}
+.nav-folder-title[data-path^="🗂"] {
+  background-color: rgba(255, 107, 107, 0.55) !important;
+}
+.nav-folder-title[data-path^="🗂"] .nav-folder-title-content {
+  color: #6b0000;
   font-weight: 700;
 }
 
-.nav-folder-title[data-path="📖 Startup Guide"] .nav-folder-title-content {
-  color: #43d9ad;
+/* ── 📖 Startup Guide — Teal ── */
+.nav-folder:has(> .nav-folder-title[data-path^="📖"]) {
+  background-color: rgba(67, 217, 173, 0.18);
+}
+.nav-folder-title[data-path^="📖"] {
+  background-color: rgba(67, 217, 173, 0.55) !important;
+}
+.nav-folder-title[data-path^="📖"] .nav-folder-title-content {
+  color: #003d2e;
   font-weight: 700;
 }
 
-.nav-folder-title[data-path="📈 Stock Market"] .nav-folder-title-content {
-  color: #a8d8a8;
+/* ── 📈 Stock Market — Lime ── */
+.nav-folder:has(> .nav-folder-title[data-path^="📈"]) {
+  background-color: rgba(168, 216, 168, 0.18);
+}
+.nav-folder-title[data-path^="📈"] {
+  background-color: rgba(168, 216, 168, 0.55) !important;
+}
+.nav-folder-title[data-path^="📈"] .nav-folder-title-content {
+  color: #1a3d1a;
   font-weight: 700;
 }

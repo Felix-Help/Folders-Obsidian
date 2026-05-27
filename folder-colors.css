@@ -1,0 +1,41 @@
+/* Folder Colors — Felix's Vault */
+
+.nav-folder-title[data-path="💡 BRAINSTORM IDEAS"] .nav-folder-title-content {
+  color: #f9c74f;
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path="💻 Coding Project for Automation"] .nav-folder-title-content {
+  color: #4cc9f0;
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path="📰 Daily News"] .nav-folder-title-content {
+  color: #f4845f;
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path="🏠 Everyday Life"] .nav-folder-title-content {
+  color: #90be6d;
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path="📁 Folders-Obsidian"] .nav-folder-title-content {
+  color: #c77dff;
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path="🗂️ Projects"] .nav-folder-title-content {
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path="📖 Startup Guide"] .nav-folder-title-content {
+  color: #43d9ad;
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path="📈 Stock Market"] .nav-folder-title-content {
+  color: #a8d8a8;
+  font-weight: 700;
+}

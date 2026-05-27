@@ -1,145 +1,163 @@
 /* ── Folder Background Colors — Felix's Vault ──
-   Root-level folders are detected by having no "/" in their path.
-   Colors assigned by position 1–12. New folders auto-get the next color. ── */
+   Each top-level folder is matched by its emoji prefix.
+   To add a new colored folder: name it starting with any emoji listed below.
+   20 emojis pre-defined — just pick one for your new folder name. ── */
 
-/* ── Shared card style for ALL root-level folders ── */
-.nav-folder-children > .nav-folder:has(> .nav-folder-title:not([data-path*="/"])) {
+/* ════════════════════════════════════════
+   SHARED CARD STYLE — applies to all matched folders
+   ════════════════════════════════════════ */
+.nav-folder:has(> .nav-folder-title[data-path^="🏠"]),
+.nav-folder:has(> .nav-folder-title[data-path^="💡"]),
+.nav-folder:has(> .nav-folder-title[data-path^="💻"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📁"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📈"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📖"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📰"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🗂"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🎯"]),
+.nav-folder:has(> .nav-folder-title[data-path^="📚"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🔑"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🧠"]),
+.nav-folder:has(> .nav-folder-title[data-path^="💰"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🌱"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🎨"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🔧"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🚀"]),
+.nav-folder:has(> .nav-folder-title[data-path^="⭐"]),
+.nav-folder:has(> .nav-folder-title[data-path^="🌍"]),
+.nav-folder:has(> .nav-folder-title[data-path^="💎"]) {
   border-radius: 8px;
   margin: 3px 4px;
   overflow: hidden;
 }
-.nav-folder-children > .nav-folder:has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
+
+.nav-folder:has(> .nav-folder-title[data-path^="🏠"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="💡"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="💻"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="📁"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="📈"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="📖"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="📰"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🗂"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🎯"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="📚"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🔑"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🧠"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="💰"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🌱"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🎨"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🔧"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🚀"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="⭐"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="🌍"]) > .nav-folder-title,
+.nav-folder:has(> .nav-folder-title[data-path^="💎"]) > .nav-folder-title {
   font-weight: 700;
 }
 
-/* ── Slot 1 — Gold ── */
-.nav-folder-children > .nav-folder:nth-child(1):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(249, 199, 79, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(1):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(249, 199, 79, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(1):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #7a5c00;
-}
+/* ════════════════════════════════════════
+   CURRENT FOLDERS
+   ════════════════════════════════════════ */
 
-/* ── Slot 2 — Cyan ── */
-.nav-folder-children > .nav-folder:nth-child(2):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(76, 201, 240, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(2):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(76, 201, 240, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(2):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #004a5e;
-}
+/* 🏠 Everyday Life — Green */
+.nav-folder:has(> .nav-folder-title[data-path^="🏠"]) { background-color: rgba(144, 190, 109, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🏠"]) > .nav-folder-title { background-color: rgba(144, 190, 109, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🏠"]) > .nav-folder-title .nav-folder-title-content { color: #1e4d00; }
 
-/* ── Slot 3 — Orange ── */
-.nav-folder-children > .nav-folder:nth-child(3):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(244, 132, 95, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(3):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(244, 132, 95, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(3):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #6b2600;
-}
+/* 💡 BRAINSTORM IDEAS — Gold */
+.nav-folder:has(> .nav-folder-title[data-path^="💡"]) { background-color: rgba(249, 199, 79, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="💡"]) > .nav-folder-title { background-color: rgba(249, 199, 79, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="💡"]) > .nav-folder-title .nav-folder-title-content { color: #7a5c00; }
 
-/* ── Slot 4 — Green ── */
-.nav-folder-children > .nav-folder:nth-child(4):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(144, 190, 109, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(4):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(144, 190, 109, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(4):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #1e4d00;
-}
+/* 💻 Coding Project — Cyan */
+.nav-folder:has(> .nav-folder-title[data-path^="💻"]) { background-color: rgba(76, 201, 240, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="💻"]) > .nav-folder-title { background-color: rgba(76, 201, 240, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="💻"]) > .nav-folder-title .nav-folder-title-content { color: #004a5e; }
 
-/* ── Slot 5 — Purple ── */
-.nav-folder-children > .nav-folder:nth-child(5):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(199, 125, 255, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(5):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(199, 125, 255, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(5):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #3b006b;
-}
+/* 📁 Folders-Obsidian — Purple */
+.nav-folder:has(> .nav-folder-title[data-path^="📁"]) { background-color: rgba(199, 125, 255, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="📁"]) > .nav-folder-title { background-color: rgba(199, 125, 255, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="📁"]) > .nav-folder-title .nav-folder-title-content { color: #3b006b; }
 
-/* ── Slot 6 — Red ── */
-.nav-folder-children > .nav-folder:nth-child(6):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(255, 107, 107, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(6):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(255, 107, 107, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(6):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #6b0000;
-}
+/* 📈 Stock Market — Lime */
+.nav-folder:has(> .nav-folder-title[data-path^="📈"]) { background-color: rgba(168, 216, 168, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="📈"]) > .nav-folder-title { background-color: rgba(168, 216, 168, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="📈"]) > .nav-folder-title .nav-folder-title-content { color: #1a3d1a; }
 
-/* ── Slot 7 — Teal ── */
-.nav-folder-children > .nav-folder:nth-child(7):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(67, 217, 173, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(7):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(67, 217, 173, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(7):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #003d2e;
-}
+/* 📖 Startup Guide — Teal */
+.nav-folder:has(> .nav-folder-title[data-path^="📖"]) { background-color: rgba(67, 217, 173, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="📖"]) > .nav-folder-title { background-color: rgba(67, 217, 173, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="📖"]) > .nav-folder-title .nav-folder-title-content { color: #003d2e; }
 
-/* ── Slot 8 — Lime ── */
-.nav-folder-children > .nav-folder:nth-child(8):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(168, 216, 168, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(8):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(168, 216, 168, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(8):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #1a3d1a;
-}
+/* 📰 Daily News — Orange */
+.nav-folder:has(> .nav-folder-title[data-path^="📰"]) { background-color: rgba(244, 132, 95, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="📰"]) > .nav-folder-title { background-color: rgba(244, 132, 95, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="📰"]) > .nav-folder-title .nav-folder-title-content { color: #6b2600; }
 
-/* ── Slot 9 — Pink ── */
-.nav-folder-children > .nav-folder:nth-child(9):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(247, 37, 133, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(9):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(247, 37, 133, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(9):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #5a0028;
-}
+/* 🗂️ Projects — Red */
+.nav-folder:has(> .nav-folder-title[data-path^="🗂"]) { background-color: rgba(255, 107, 107, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🗂"]) > .nav-folder-title { background-color: rgba(255, 107, 107, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🗂"]) > .nav-folder-title .nav-folder-title-content { color: #6b0000; }
 
-/* ── Slot 10 — Blue ── */
-.nav-folder-children > .nav-folder:nth-child(10):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(67, 97, 238, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(10):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(67, 97, 238, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(10):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #f0f4ff;
-}
+/* ════════════════════════════════════════
+   EXTRA EMOJIS — ready for new folders
+   ════════════════════════════════════════ */
 
-/* ── Slot 11 — Amber ── */
-.nav-folder-children > .nav-folder:nth-child(11):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(251, 133, 0, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(11):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(251, 133, 0, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(11):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #4d2800;
-}
+/* 🎯 — Coral Pink */
+.nav-folder:has(> .nav-folder-title[data-path^="🎯"]) { background-color: rgba(255, 107, 157, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🎯"]) > .nav-folder-title { background-color: rgba(255, 107, 157, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🎯"]) > .nav-folder-title .nav-folder-title-content { color: #5a0028; }
 
-/* ── Slot 12 — Sage ── */
-.nav-folder-children > .nav-folder:nth-child(12):has(> .nav-folder-title:not([data-path*="/"])) {
-  background-color: rgba(116, 198, 157, 0.18);
-}
-.nav-folder-children > .nav-folder:nth-child(12):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title {
-  background-color: rgba(116, 198, 157, 0.55) !important;
-}
-.nav-folder-children > .nav-folder:nth-child(12):has(> .nav-folder-title:not([data-path*="/"])) > .nav-folder-title .nav-folder-title-content {
-  color: #003320;
-}
+/* 📚 — Warm Brown */
+.nav-folder:has(> .nav-folder-title[data-path^="📚"]) { background-color: rgba(200, 150, 62, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="📚"]) > .nav-folder-title { background-color: rgba(200, 150, 62, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="📚"]) > .nav-folder-title .nav-folder-title-content { color: #4a2800; }
+
+/* 🔑 — Bright Yellow */
+.nav-folder:has(> .nav-folder-title[data-path^="🔑"]) { background-color: rgba(255, 231, 76, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🔑"]) > .nav-folder-title { background-color: rgba(255, 231, 76, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🔑"]) > .nav-folder-title .nav-folder-title-content { color: #4a3800; }
+
+/* 🧠 — Lavender */
+.nav-folder:has(> .nav-folder-title[data-path^="🧠"]) { background-color: rgba(181, 164, 247, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🧠"]) > .nav-folder-title { background-color: rgba(181, 164, 247, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🧠"]) > .nav-folder-title .nav-folder-title-content { color: #2d005e; }
+
+/* 💰 — Emerald */
+.nav-folder:has(> .nav-folder-title[data-path^="💰"]) { background-color: rgba(6, 214, 160, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="💰"]) > .nav-folder-title { background-color: rgba(6, 214, 160, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="💰"]) > .nav-folder-title .nav-folder-title-content { color: #003322; }
+
+/* 🌱 — Sage */
+.nav-folder:has(> .nav-folder-title[data-path^="🌱"]) { background-color: rgba(116, 198, 157, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🌱"]) > .nav-folder-title { background-color: rgba(116, 198, 157, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🌱"]) > .nav-folder-title .nav-folder-title-content { color: #003320; }
+
+/* 🎨 — Hot Pink */
+.nav-folder:has(> .nav-folder-title[data-path^="🎨"]) { background-color: rgba(247, 37, 133, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🎨"]) > .nav-folder-title { background-color: rgba(247, 37, 133, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🎨"]) > .nav-folder-title .nav-folder-title-content { color: #5a0028; }
+
+/* 🔧 — Steel Blue */
+.nav-folder:has(> .nav-folder-title[data-path^="🔧"]) { background-color: rgba(67, 97, 238, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🔧"]) > .nav-folder-title { background-color: rgba(67, 97, 238, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🔧"]) > .nav-folder-title .nav-folder-title-content { color: #f0f4ff; }
+
+/* 🚀 — Amber */
+.nav-folder:has(> .nav-folder-title[data-path^="🚀"]) { background-color: rgba(251, 133, 0, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🚀"]) > .nav-folder-title { background-color: rgba(251, 133, 0, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🚀"]) > .nav-folder-title .nav-folder-title-content { color: #4d2800; }
+
+/* ⭐ — Star Gold */
+.nav-folder:has(> .nav-folder-title[data-path^="⭐"]) { background-color: rgba(255, 214, 0, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="⭐"]) > .nav-folder-title { background-color: rgba(255, 214, 0, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="⭐"]) > .nav-folder-title .nav-folder-title-content { color: #4a3800; }
+
+/* 🌍 — Earth Blue */
+.nav-folder:has(> .nav-folder-title[data-path^="🌍"]) { background-color: rgba(83, 144, 217, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="🌍"]) > .nav-folder-title { background-color: rgba(83, 144, 217, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="🌍"]) > .nav-folder-title .nav-folder-title-content { color: #001f40; }
+
+/* 💎 — Diamond Blue */
+.nav-folder:has(> .nav-folder-title[data-path^="💎"]) { background-color: rgba(72, 202, 228, 0.18); }
+.nav-folder:has(> .nav-folder-title[data-path^="💎"]) > .nav-folder-title { background-color: rgba(72, 202, 228, 0.55) !important; }
+.nav-folder:has(> .nav-folder-title[data-path^="💎"]) > .nav-folder-title .nav-folder-title-content { color: #002a33; }
